@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://Dairo01001.github.io/portfolio",
   "scripts": {
+    "deploy": "npm run build && gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "4.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "6.4.0",
