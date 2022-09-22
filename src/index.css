@@ -11,6 +11,7 @@
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
 }
+
 body {
   background-image: url("img/fondo.jpg");
   background-repeat: no-repeat;
@@ -30,13 +31,25 @@ i {
   font-size: 1.5rem;
 }
 
+h3 {
+  color: #ecf0f1;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 2rem;
+  text-shadow: 0 0 5px rgba(0, 178, 255, 1), 0 0 10px rgba(0, 178, 255, 1),
+    0 0 20px rgba(0, 178, 255, 1), 0 0 40px rgba(38, 104, 127, 1),
+    0 0 80px rgba(38, 104, 127, 1), 0 0 90px rgba(38, 104, 127, 1),
+    0 0 100px rgba(38, 104, 127, 1), 0 0 140px rgba(38, 104, 127, 1),
+    0 0 180px rgba(38, 104, 127, 1);
+}
+
 .wrapper {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
   background-color: var(--background-color);
   clip-path: circle(25px at calc(100% - 45px) 45px);
   transition: all 0.3s ease-in-out;
@@ -355,6 +368,29 @@ footer .footer-right a:hover {
   color: #e2dedb;
 }
 
+.skills {
+  display: grid;
+  grid-auto-flow: column;
+  min-width: 70vw;
+  min-height: 60vh;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.skills div {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skills div a img:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
 @keyframes opacity {
   0% {
     opacity: 0;
@@ -403,5 +439,12 @@ footer .footer-right a:hover {
   }
   100% {
     filter: hue-rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
   }
 }
