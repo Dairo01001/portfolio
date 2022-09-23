@@ -370,8 +370,9 @@ footer .footer-right a:hover {
 
 .skills {
   display: grid;
-  grid-auto-flow: column;
-  min-width: 70vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  width: 70vw;
   min-height: 60vh;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.8);
@@ -444,7 +445,6 @@ footer .footer-right a:hover {
 
 @media (max-width: 768px) {
   .skills {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
   }
 }
